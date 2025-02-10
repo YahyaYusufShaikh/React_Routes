@@ -10,8 +10,8 @@ import { Landing } from './components/landing'
 function App() {
   return (
     <div>
-      <div style={{background: "black"}}>
-        Hi this is topBar
+      <div style={{background: "black", color : "white"}}>
+        Hi this is Top Bar
       </div>
     <BrowserRouter>
       <Routes>
