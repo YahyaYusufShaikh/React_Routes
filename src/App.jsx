@@ -3,7 +3,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom'
 import { Dashboard } from './components/dashboard'
 import { Landing } from './components/landing'
 
@@ -31,6 +31,17 @@ function App() {
     </BrowserRouter>
     </div>
   )
+}
+
+function Appbar(){
+  const navigate = useNavigate();
+
+  return <div>
+    <div>
+      <button onClick={()=>{navigate("/")}}></button>
+      <button onClick={()=>{navigate("/dashboard")}}></button>
+    </div>
+  </div>
 }
 
 export default App
