@@ -10,7 +10,7 @@ import { Landing } from './components/landing'
 function App() {
   return (
     <div>
-      <div style={{background: "black", color : "white",}}>
+      {/* <div style={{background: "black", color : "white",}}>
         <button style={{marginRight:"10px"}}
           onClick={()=>{
           window.location.href = "/"
@@ -22,7 +22,7 @@ function App() {
           window.location.href = "/dashboard"
           }}>Dashboard Page
         </button>
-      </div>
+      </div> */}
     <BrowserRouter>
       <Routes>
         <Route path="/dashboard" element={<Dashboard></Dashboard>}></Route>
