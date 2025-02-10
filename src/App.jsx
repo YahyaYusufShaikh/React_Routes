@@ -38,9 +38,9 @@ function Appbar(){
   const navigate = useNavigate();
 
   return <div>
-    <div>
-      <button onClick={()=>{navigate("/")}}></button>
-      <button onClick={()=>{navigate("/dashboard")}}></button>
+    <div style={{background: "black", color:"white"}}>
+      <button style={{marginRight: "10px"}} onClick={()=>{navigate("/")}}>Landing Page</button>
+      <button style={{marginLeft: "10px"}} onClick={()=>{navigate("/dashboard")}}>Dashboard Page</button>
     </div>
   </div>
 }
