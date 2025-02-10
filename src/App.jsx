@@ -24,6 +24,7 @@ function App() {
         </button>
       </div> */}
     <BrowserRouter>
+      <Appbar></Appbar>
       <Routes>
         <Route path="/dashboard" element={<Dashboard></Dashboard>}></Route>
         <Route path="/" element={<Landing></Landing>}></Route>
