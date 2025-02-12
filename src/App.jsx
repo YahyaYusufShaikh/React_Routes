@@ -1,11 +1,12 @@
 /* eslint-disable no-unused-vars */
-import { useState } from 'react'
+import React, { lazy, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom'
-import  Dashboard  from './components/dashboard'
-import  Landing  from './components/landing'
+const Dashboard = React.lazy(()=> import('./components/dashboard'));
+const Landing = React.lazy(()=> import('./components/landing'));
+
 
 function App() {
   return (
