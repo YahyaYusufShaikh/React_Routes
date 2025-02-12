@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { lazy, useState } from 'react'
+import React, { lazy, Suspense, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -27,8 +27,8 @@ function App() {
     <BrowserRouter>
       <Appbar></Appbar>
       <Routes>
-        <Route path="/dashboard" element={<Dashboard></Dashboard>}></Route>
-        <Route path="/" element={<Landing></Landing>}></Route>
+        <Route path="/dashboard" element={<Suspense fallback={"loading"}><Dashboard></Dashboard></Suspense>}></Route>
+        <Route path="/" element={<Suspense fallback={"loading"}><Landing></Landing></Suspense>}></Route>
       </Routes>
     </BrowserRouter>
     </div>
